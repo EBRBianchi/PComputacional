@@ -1,0 +1,9 @@
+distancia = int(input("Digite á distância a percorrer em Km:"))
+combustivel = int(input("Digite seu nível de combutível atual em Litros:"))
+eficiencia = float(input("Digite a eficiência do seu veículo em Km/L:"))
+possoPercorrer = combustivel / eficiencia
+print ("Km que você pode percorrer", possoPercorrer)
+if possoPercorrer >= distancia:
+    print ("Você possui combutível o suficiente")
+else:
+        print ("Você não possui combutível o suficiente")
