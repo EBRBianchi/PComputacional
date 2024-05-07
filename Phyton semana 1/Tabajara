@@ -13,7 +13,7 @@ while opcao <= 1:
         dinheiro = float(input("digite seu dinheiro:"))
         troco = dinheiro - somaFinal
         print ("Total a pagar R$:", somaFinal)
-        print ("Seu troco", troco)
+        print ("Seu troco:", troco)
         print ("Volte sempre")
       
         print ("Opção inválida")
