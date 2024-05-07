@@ -1,0 +1,8 @@
+numero_total = str(input("Digite seu n°:"))
+soma = 0
+
+for numero in numero_total:
+    if int(numero) % 2 != 0:
+        soma += int(numero)
+        print (numero)
+print (soma)
