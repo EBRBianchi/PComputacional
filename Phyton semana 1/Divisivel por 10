@@ -1,0 +1,6 @@
+contador = 1
+n = int(input("Digite seu número:"))
+while contador < n:
+    contador += 1
+    if contador % 10 == 0:
+        print ("N° divisivel por 10:", contador)
