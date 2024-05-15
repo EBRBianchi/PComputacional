@@ -1,0 +1,6 @@
+n = input("DIgite seu numero:")
+soma = 0
+for digito in n:
+    digito_int = int(digito)
+    soma += digito_int
+print(f"{n} Somado {soma}")
