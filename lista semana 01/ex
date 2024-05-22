@@ -1,0 +1,9 @@
+indice = 0
+frutas = ["maça", "tomate"]
+print(len(frutas))
+elemento =  0
+
+while indice < len(frutas):
+    elemento = frutas[indice]
+    indice +=1
+    print(elemento)
