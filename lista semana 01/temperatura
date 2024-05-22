@@ -1,0 +1,12 @@
+temperatura = [30,22,25,28,31,27,29]
+count = 0
+temp = 0
+while count < len(temperatura):
+    temp = temperatura[count]
+    if temp < 25:
+        temperatura[count] = temp + 5
+    count += 1
+
+print (temperatura)
+    
+    
