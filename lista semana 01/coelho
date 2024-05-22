@@ -1,0 +1,5 @@
+animais = ["cachorro", "gato", "papagaio", "tartaruga"]
+print(animais[0],animais[3])
+contador = int (input("digite o indice que deseja alterar:"))
+animais[contador] = "coelho"
+print(animais)
