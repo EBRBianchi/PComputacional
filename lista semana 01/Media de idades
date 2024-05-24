@@ -1,0 +1,21 @@
+lista_idade = []
+soma = 0 
+media = 0
+idade = None
+count = 0
+
+
+while idade != 0 :
+    idade = int(input("Digite sua idade:"))
+    lista_idade.append(idade)
+    soma = soma + lista_idade[count]
+    count += 1
+    if count > 1:
+        media = soma / (len(lista_idade) -1) 
+
+    if idade == 0:
+        print (lista_idade)
+        print (len(lista_idade) - 1)
+        print(soma)
+        print(media)
+        
