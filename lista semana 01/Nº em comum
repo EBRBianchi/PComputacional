@@ -1,0 +1,31 @@
+lista_A = []
+lista_B = []
+lista_C = []
+posição = 0
+elemento = 0
+elementoB = 0
+count = 0
+countB = 0
+while count <= 5:
+    elemento = int(input("Digite seu elemento:"))
+    lista_A.append(elemento)
+    elementoB = int(input("Digite seu elemento B:"))
+    lista_B.append(elementoB)
+    print(lista_A)
+    print(lista_B)
+
+    if elementoB != elemento:
+        elemento = lista_A[count]
+        elementoB = lista_B[countB]
+        if elemento != elementoB:
+            count+=1
+            if count == 5:
+                countB +=1
+    elif elemento == elementoB:
+        lista_C.append(elemento)
+        
+
+ 
+print(lista_A)
+print(lista_B)
+print ("Nº em comum", lista_C)
