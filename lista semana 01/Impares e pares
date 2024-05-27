@@ -1,0 +1,18 @@
+lista_A = []
+lista_B = []
+lista_C = []
+posição = 0
+elemento = 0
+count = 0
+while count <= 10:
+    elemento = int(input("Digite seu elemento:"))
+    lista_A.append(elemento)
+    count += 1
+    if elemento % 2 == 0:
+        lista_B.append(elemento)
+    else:
+        lista_C.append(elemento)
+
+print(lista_A)
+print("Pares:", lista_B)
+print ("Impares:", lista_C)
