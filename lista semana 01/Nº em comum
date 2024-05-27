@@ -6,11 +6,13 @@ elemento = 0
 elementoB = 0
 count = 0
 countB = 0
-while count <= 5:
+countC = 0
+while countC <= 5:
     elemento = int(input("Digite seu elemento:"))
     lista_A.append(elemento)
     elementoB = int(input("Digite seu elemento B:"))
     lista_B.append(elementoB)
+    countC += 1
     print(lista_A)
     print(lista_B)
 
