@@ -1,0 +1,23 @@
+lista_A = []
+
+
+for i in range(10):
+    numero = int(input(f"digite n° para posição [{i}]:"))
+    lista_A.append(numero)
+
+count = 0 
+menor_n = lista_A[0]
+maior_n = lista_A[0]
+
+
+while count < len(lista_A):
+    valor_atual = lista_A[count]
+    if valor_atual > maior_n:
+        maior_n = valor_atual
+    elif valor_atual < menor_n:
+        menor_n = valor_atual
+    count+=1
+print(lista_A)
+print(menor_n)
+print(maior_n)
+   
