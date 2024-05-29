@@ -1,0 +1,20 @@
+lista_ = []
+lista_A = []
+count = 0
+elemento = 0
+n_repetido = 0
+n_repetido = int(input("digite seu numero rep:"))
+
+for elemento in range(5):
+    elemento = int(input("digite:"))
+    lista_.append(elemento)
+    numero_atual = lista_[count]
+    count += 1
+    if n_repetido == numero_atual:
+        lista_A.append(n_repetido)
+        
+
+        
+print(lista_)
+print(lista_A)
+print (len(lista_A))
