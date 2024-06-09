@@ -1,0 +1,19 @@
+lista = []
+lista_b = []
+elemento = 0
+elmento_b = 0
+iguais = 0
+
+for i in range(5):
+    elemento = int(input("Digite o seu elemento:")) 
+    lista.append(elemento)
+    lista_b.append(elemento)
+
+for i in range (5):
+    for j in range(5):
+        if lista[i] == lista[j] and i != j:
+            iguais += 1
+            lista_b.remove(lista[i])
+            break   
+print(lista)
+print(lista_b)
