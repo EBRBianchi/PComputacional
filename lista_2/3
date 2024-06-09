@@ -1,0 +1,13 @@
+lista = []
+numero = 0
+n_atual = 0 
+for i in range(5):
+    numero = int(input(f"digite n° para posição [{i}]:"))
+    lista.append(numero)
+    n_atual = lista[i]
+    j = i - 1
+    while j >= 0 and n_atual < lista[j]:
+        lista[j + 1] = lista[j]
+        j -= 1
+    lista[j + 1] = n_atual
+print(lista)
