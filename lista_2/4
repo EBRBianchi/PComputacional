@@ -1,0 +1,24 @@
+notas = [100, 50, 20, 10, 1]
+
+troco = 0
+preco = int(input("Preço:"))
+pagamento = int(input("Pagamento:"))
+troco = pagamento - preco
+quantidade_notas = []
+
+# Verifica se o pagamento é suficiente
+if troco < 0:
+    print("Pagamento insuficiente!")
+else:
+    for nota in notas:
+        quantidade = troco // nota  # Quantidade de notas dessa denominação
+        troco = troco % nota  # Atualiza o troco para o restante
+        quantidade_notas.append((nota, quantidade))
+
+    print(f"Preço: {preco}")
+    print(f"Pagamento: {pagamento}")
+    print("Troco:")
+    for nota, quantidade in quantidade_notas:
+        if quantidade > 0:
+            print(f"{quantidade} nota(s) de {nota}")
+#obs: pedi ajuda para IA
