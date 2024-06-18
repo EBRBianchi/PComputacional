@@ -1,0 +1,16 @@
+def contar_elementos(lista,elemento):
+    count = 0
+    for item in lista:
+        if item == elemento:
+        
+            count += 1
+    return count
+
+
+def main ():
+    minha_lista = [1, 2, 3, 1, 4, 6, 6]
+    elemento = int(input(""))
+    quantidade = contar_elementos (minha_lista,elemento)
+    print(quantidade)
+
+main()
