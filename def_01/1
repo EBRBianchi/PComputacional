@@ -1,0 +1,15 @@
+def maior_numero (lista, elemento):
+    maior = 0
+    for i in range(len(lista)):
+        if maior < lista[i]:
+            maior = lista[i]
+    return maior
+
+def main ():
+    minha_lista = [1,39,0,4,50,90,2,19]
+    elemento = int(input("Digite um elemento:"))
+    minha_lista.append(elemento)
+    maior_numero_final = maior_numero(minha_lista,elemento)
+    print(maior_numero_final)
+
+main()
