@@ -1,0 +1,13 @@
+def calcular_media(lista):
+    soma = 0 
+    for count in range(len(lista)):
+        soma = soma + lista[count]
+    media = soma / len(lista)
+    return media
+
+def main ():
+    minha_lista = [1,2,5]
+    media_final = calcular_media (minha_lista)
+    print(media_final)
+
+main()
