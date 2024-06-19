@@ -1,0 +1,20 @@
+def fibonacci_lista (lista):
+    fibonacci_n = []
+    ultimo = 1
+    penultimo = 1
+    numero = int(input(":"))
+    for contador in range(2,numero):
+        termo = ultimo + penultimo
+        penultimo = ultimo
+        ultimo = termo
+        contador +=1
+        fibonacci_n.append(termo)
+    return fibonacci_n
+
+
+def main():
+    minha_lista = [0,1]
+    lista = fibonacci_lista(minha_lista)
+    print(lista)
+
+main()
