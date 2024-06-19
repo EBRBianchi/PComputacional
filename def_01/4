@@ -1,0 +1,14 @@
+def lista_pares (lista):
+    lista_par = []
+    for item in lista:
+        if item % 2 == 0:
+            
+            lista_par.append(item)
+    return lista_par
+
+def main():
+    minha_lista = [ 10, 5 , 8, 9, 0, 5, 7, 3, 2, 1]
+    minha_lista_pares = lista_pares(minha_lista)
+    print(minha_lista)
+    print(minha_lista_pares)
+main()
