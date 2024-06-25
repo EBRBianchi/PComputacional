@@ -1,0 +1,44 @@
+lista = [1,2,3,4,5]
+reservadas = []
+
+while True:
+    opc = int(input('''\n1 - Reservar Mesa
+    \n2 - Cancelar reserva
+    \n3 - Ver Mesas disponíveis
+    \n4 - Sair
+    
+    Digite sua opção : '''))
+
+
+    if opc == 1:
+        mesa = int(input("Digite a mesa: "))
+        if mesa in lista:
+            reservadas.append(mesa)
+            lista.remove(mesa)
+            print(f"Reservada com sucesso!")
+            
+        
+            continue
+        elif mesa in reservadas:
+            mesa = input("Mesa indisponível. Digite outra mesa: ")
+        
+
+    elif opc == 2:
+        mesa = int(input("Digite a mesa que deseja cancelar: "))
+        while mesa in reservadas:
+            if mesa in reservadas:
+                reservadas.remove(mesa)
+                lista.append(mesa)
+                print(f"Cancelamento concluido, as mesas reservadas agora são: {reservadas}" )
+            elif mesa not in reservadas:
+                mesa = int(input(f"Digite novamente mesa digitada não está reservada, as mesas reservadas são: {reservadas}:"))
+                reservadas.remove(mesa)
+                lista.append(mesa)
+                print(reservadas)
+
+    elif opc == 3:
+        print(f"As mesas disponiveis são {lista}")
+        
+    elif opc == 4:         
+        print("Obrigado")
+        break
