@@ -1,0 +1,65 @@
+def menu():
+    print('''
+    1 - Reservar Mesa
+    2 - Cancelar reserva
+    3 - Ver Mesas disponíveis
+    4 - Sair''')
+    opcao = int(input("Digite a opção: "))
+    return opcao
+
+def reservar(lista_mesas, lista_reservadas, lista_nomes):
+    acao = int(input("Digite a mesa para reservar: "))
+    horario = [19, 20, 21, 22]
+    horario_desejado = int(input("Digite o horário para reservar: "))
+    nome = str(input("Digite seu nome: "))
+    
+    if acao not in lista_mesas or horario_desejado not in horario:
+        print(f"Mesa {acao} já está reservada ou horário inválido. Escolha outra mesa ou horário.")
+    else:
+        lista_mesas.remove(acao)
+        lista_reservadas.append(acao)
+        horario.remove(horario_desejado)
+        lista_nomes[acao] = nome  # Associa o nome à mesa
+        print(f"Mesa {acao} reservada com sucesso para {nome}!")
+    
+    return lista_mesas, lista_reservadas, lista_nomes
+
+def cancelar(lista_mesas, lista_reservadas, lista_nomes):
+    acao = int(input("Digite a mesa para cancelar a reserva: "))
+    
+    if acao not in lista_reservadas:
+        print(f"A mesa {acao} não está reservada!")
+    else:
+        nome_reserva = lista_nomes.get(acao, "desconhecido")  # Obtém o nome associado à mesa
+        lista_reservadas.remove(acao)
+        lista_mesas.append(acao)
+        print(f"Mesa {acao} liberada da reserva de {nome_reserva} com sucesso!")
+    
+    return lista_mesas, lista_reservadas
+
+def printar(lista_mesas, lista_reservadas):
+    print("Disponíveis:", lista_mesas)
+    print("Reservadas:", lista_reservadas)
+
+def main():
+    lista_mesas = [1, 2, 3, 4, 5]
+    lista_reservadas = []
+    lista_nomes = {}  # Dicionário para associar nomes às mesas
+
+    opc = 0
+
+    while opc != 4:
+        opc = menu()
+
+        if opc == 1:
+            lista_mesas, lista_reservadas, lista_nomes = reservar(lista_mesas, lista_reservadas, lista_nomes)
+        elif opc == 2:
+            lista_mesas, lista_reservadas = cancelar(lista_mesas, lista_reservadas, lista_nomes)
+        elif opc == 3:
+            printar(lista_mesas, lista_reservadas)
+        elif opc == 4:
+            print("Até mais!")
+        else:
+            print("Opção inválida!")
+
+main()
